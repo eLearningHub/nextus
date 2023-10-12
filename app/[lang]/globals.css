@@ -1,0 +1,50 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+/******************************************* 
+  Custom Styles
+*******************************************/
+
+@layer utilities {
+  .animate-pause {
+    animation-play-state: paused;
+  }
+}
+
+
+
+/******************************************* 
+  AgencyOs Styles
+*******************************************/
+
+.visual-effects .mouse-gradient {
+  background: repeating-linear-gradient(
+    to right,
+    #6644ff 0%,
+    #947cff 50%,
+    #ff99dd 100%
+  );
+  filter: blur(100px);
+  opacity: 0.5;
+}
+
+/* .grain-bg {
+  background-image: url('~~/assets/img/noise.png');
+} */
+
+::selection {
+  @apply bg-accent text-white;
+}
+
+/* For Webkit-based browsers (Chrome, Safari and Opera) */
+.scrollbar-hide::-webkit-scrollbar {
+  display: none;
+}
+
+/* For IE, Edge and Firefox */
+.scrollbar-hide {
+  -ms-overflow-style: none; /* IE and Edge */
+  scrollbar-width: none; /* Firefox */
+}
